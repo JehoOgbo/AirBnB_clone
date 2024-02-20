@@ -1,0 +1,19 @@
+/*
+ * === Header style ===
+ */
+/* Header style */
+header {
+    background-color: #ffffff url('../images/logo.png') 20px centre no repeat;
+    height: 70px;
+    width: 100%;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+/* Header logo style */
+header .logo{
+    height: inherit;
+    width: inherit;
+    background: url("../images/logo.png") no-repeat;
+    background-repeat: no-repeat;
+    margin-left: 20px;
+}
