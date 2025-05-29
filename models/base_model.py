@@ -16,12 +16,13 @@ class BaseModel:
                     continue
                 elif key == '__class__':
                     continue
-                if key in ['id', 'created_at', 'updated_at']:
-                    setattr(self, key, value)
+                setattr(self, key, value)
             return
         self.id = str(uuid.uuid4())
         self.created_at = datetime.datetime.now()
         self.updated_at = datetime.datetime.now()
+        from .__init__ import storage
+        storage.new(self)
 
     def __str__(self):
         """ returns  [<class name>] (<self.id>) <self.__dict__> """
@@ -30,6 +31,9 @@ class BaseModel:
     def save(self):
         """ update the instance with current datetime """
         self.updated_at = datetime.datetime.now()
+        #storage.new(self)
+        from .__init__ import storage
+        storage.save()
 
     def to_dict(self):
         """
