@@ -64,7 +64,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_all(self, arg):
         """Prints all instances based or not on class name"""
-        if arg is None:
+        if arg is None or len(arg) == 0:
             storage.reload()
             every = storage.all()
             for value in every.values():
