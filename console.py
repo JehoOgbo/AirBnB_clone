@@ -63,20 +63,20 @@ class HBNBCommand(cmd.Cmd):
 
     def do_all(self, arg):
         """Prints all instances based or not on class name"""
-        lister = HBNBCommand.objs.keys()
+        obj_list = ['BaseModel', 'User']
         if arg is None or len(arg) == 0:
             storage.reload()
             every = storage.all()
             for value in every.values():
                 print(value)
-        elif arg in lister:
-            index = lister.index(arg)
+        elif arg in obj_list:
+            index = obj_list.index(arg)
             storage.reload()
             every = storage.all()
             lister = []
             for key in every.keys():
                 dey = key.split('.')
-                if dey[0] == lister[index]:
+                if dey[0] == obj_list[index]:
                     lister.append(every[key].__str__())
             print(lister)
         else:
