@@ -4,13 +4,23 @@ import cmd
 from models.base_model import BaseModel
 from models.__init__ import storage
 from models.user import User
+from models.amenity import Amenity
+from models.state import State
+from models.place import Place
+from models.city import City
+from models.review import Review
 import re
 
 
 class HBNBCommand(cmd.Cmd):
     """ defines the command interpreter """
     prompt = '(hbnb) '
-    objs = {'BaseModel': BaseModel, 'User': User}
+    objs = {'BaseModel': BaseModel, 'User': User,
+            'Amenity': Amenity,
+            'State': State,
+            'Place': Place,
+            'City': City,
+            'Review': Review}
 
     def emptyline(self):
         """An empty line should not execute anything"""
@@ -63,7 +73,8 @@ class HBNBCommand(cmd.Cmd):
 
     def do_all(self, arg):
         """Prints all instances based or not on class name"""
-        obj_list = ['BaseModel', 'User']
+        obj_list = ['BaseModel', 'User', 'State', 'Place', 'City',
+                    'Amenity', 'Review']
         if arg is None or len(arg) == 0:
             storage.reload()
             every = storage.all()

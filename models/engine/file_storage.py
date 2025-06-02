@@ -6,6 +6,11 @@ JSON file to instances
 import json
 from models.base_model import BaseModel
 from models.user import User
+from models.amenity import Amenity
+from models.state import State
+from models.place import Place
+from models.city import City
+from models.review import Review
 
 
 class FileStorage:
@@ -45,7 +50,13 @@ class FileStorage:
         except FileNotFoundError:
             return
         new_dict = {}
-        objs = {'BaseModel': BaseModel, 'User': User}
+        objs = {'BaseModel': BaseModel,
+                'User': User,
+                'Amenity': Amenity,
+                'Review': Review,
+                'City': City,
+                'State': State,
+                'Place': Place}
         for key, value in dictionary.items():
             kiwi = key.split('.')
             use = kiwi[0]
