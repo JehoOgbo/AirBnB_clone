@@ -47,6 +47,8 @@ class FileStorage:
         new_dict = {}
         objs = {'BaseModel': BaseModel, 'User': User}
         for key, value in dictionary.items():
-            bases = objs[key](**value)
+            kiwi = key.split('.')
+            use = kiwi[0]
+            bases = objs[use](**value)
             new_dict[key] = bases
         FileStorage.__objects = new_dict

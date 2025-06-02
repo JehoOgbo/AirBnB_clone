@@ -3,6 +3,7 @@
 import cmd
 from models.base_model import BaseModel
 from models.__init__ import storage
+from models.user import User
 import re
 
 
@@ -68,7 +69,7 @@ class HBNBCommand(cmd.Cmd):
             every = storage.all()
             for value in every.values():
                 print(value)
-        elif arg is in lister:
+        elif arg in lister:
             index = lister.index(arg)
             storage.reload()
             every = storage.all()
