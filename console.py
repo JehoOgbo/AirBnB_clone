@@ -9,6 +9,7 @@ import re
 class HBNBCommand(cmd.Cmd):
     """ defines the command interpreter """
     prompt = '(hbnb) '
+    objs = {'BaseModel': BaseModel, 'User': User}
 
     def emptyline(self):
         """An empty line should not execute anything"""
@@ -28,10 +29,10 @@ class HBNBCommand(cmd.Cmd):
         if arg is None or len(arg) == 0:
             print("** class name missing **")
             return
-        elif arg != 'BaseModel':
+        if arg not in HBNBCommand.objs.keys():
             print("** class doesn't exist **")
             return
-        new = BaseModel()
+        new = HBNBCommand.objs[arg]()
         new.save()
         print(new.id)
 
@@ -41,7 +42,7 @@ class HBNBCommand(cmd.Cmd):
         if arg is None or len(arg) == 0:
             print("** class name missing **")
             return
-        if args[0] != 'BaseModel':
+        if args[0] not in HBNBCommand.objs.keys():
             print("** class doesn't exist **")
             return
         if len(args) < 2:
@@ -53,29 +54,28 @@ class HBNBCommand(cmd.Cmd):
             print("** no instance found **")
             return
         name = args[0] + '.' + args[1]
-        check = 0
         for key, value in new.items():
             if key == name:
-                check = 1
                 print(value)
-                break
-        if check == 0:
-            print("** no instance found **")
+                return
+        print("** no instance found **")
 
     def do_all(self, arg):
         """Prints all instances based or not on class name"""
+        lister = HBNBCommand.objs.keys()
         if arg is None or len(arg) == 0:
             storage.reload()
             every = storage.all()
             for value in every.values():
                 print(value)
-        elif arg == 'BaseModel':
+        elif arg is in lister:
+            index = lister.index(arg)
             storage.reload()
             every = storage.all()
             lister = []
             for key in every.keys():
                 dey = key.split('.')
-                if dey[0] == 'BaseModel':
+                if dey[0] == lister[index]:
                     lister.append(every[key].__str__())
             print(lister)
         else:
@@ -89,7 +89,7 @@ class HBNBCommand(cmd.Cmd):
         result = re.split(r'\s(?=(?:[^"]*"[^"]*")*[^"]*$)', arg)
         storage.reload()
         checker = storage.all()
-        if result[0] != 'BaseModel':
+        if result[0] not in HBNBCommand.objs.keys():
             print("** class doesn't exist **")
             return
         if len(result) < 2:
@@ -115,7 +115,7 @@ class HBNBCommand(cmd.Cmd):
         if arg is None or len(arg) == 0:
             print("** class name missing **")
             return
-        if args[0] != 'BaseModel':
+        if args[0] not in HBNBCommand.objs.keys():
             print("** class doesn't exist **")
             return
         if len(args) < 2:
