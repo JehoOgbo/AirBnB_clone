@@ -1,89 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-  <meta charset="utf-8">
-  <head>
-    <title>AirBnB Clone</title>
-    <link rel="stylesheet" href="styles/4-common.css">
-    <link rel="stylesheet" href="styles/3-header.css">
-    <link rel="stylesheet" href="styles/3-footer.css">
-    <link rel="stylesheet" href="styles/6-filters.css">
-    <link rel="stylesheet" href="styles/8-places.css">
-    <link rel="icon" href="images/icon.png" type="image/x-icon"/>
-  </head>
+	<head>
+		<meta charset="utf-8">
+		<title>Airbnb Clone</title>
+		<link rel="stylesheet" href="styles/4-common.css">
+		<link rel="stylesheet" href="styles/3-header.css">
+		<link rel="stylesheet" href="styles/3-footer.css">
+		<link rel="stylesheet" href="styles/6-filters.css">
+		<link rel="stylesheet" href="styles/8-places.css">
+		<link rel="logo" href="images/logo.png">
+		<link rel="icon" href="./images/icon.png">
+		<link rel="bedroom" href="./images/bedroom.png">
+		<link rel="bathroom" href="./images/bathroom.png">
+		<link rel="guests" href="./images/guest.png">
+	</head>
 
+	<body>
+		<header>
+		</header>
 
-  <body class="common">
-    <header>
-      <div class="logo">
-      </div>
-    </header>
-    <div class="container">
-      <section class="filters">
-	<div class="locations">
-	  <h3>States</h3>
-	  <h4>Lagos, Abuja...</h4>
-	  <ul class="popover">
-	    <li><h2>Kaduna:</h2></li>
-	    <li>
-	      <ul class="popover_list">
-		<li>Kaduna</li>
-		<li>Kafanchan</li>
-	      </ul>
-	    </li>
-	    <li><h2>Ebonyi:</h2></li>
-	    <li>
-	      <ul class="popover_list">
-		<li>Afikpo</li>
-		<li>Abakiliki</li>
-	      </ul>
-	    <li>
-	</div>
-	<div class="amenities">
-	  <h3>Amenities</h3>
-	  <h4>Laundry, Internet...</h4>
-	  <ul class="popover">
-	    <li>Internet</li>
-	    <li>TV</li>
-	    <li>Kitchen</li>
-	    <li>Iron</li>
-	  </ul>
-	</div>
-	<button class="align_right">
-	  Search
-	</button>
-      </section>
+		<div class="container">
+			<section class="filters">
+				<div class="locations">
+					<h3 class="title">States</h3>
+					<h4 class="subtitles">Carlifornia, Arizona...</h4>
+					<ul class="popover">
+						<li class="heading">Arizona:</li>
+							<ul class="subpop">
+								<li>Page</li>
+								<li>Page 2</li>
+							</ul>
+						<li class="heading pad">California:</li>
+							<ul class="subpop">
+								<li>San Francisco</li>
+								<li>Los Altos</li>
+							</ul>
+					</ul>
+				</div><!--
+				--><div class="amenities">
+					<h3 class="title">Amenities</h3>
+					<h4 class="subtitles">Internet, Kitchen...</h4>
+					<ul class="popover stand-alone">
+						<li>Internet</li>
+						<li>Kitchen</li>
+						<li>TV</li>
+						<li>Iron</li>
+					</ul>
+				</div>
+				<button class="btn">Search</button>
+			</section>
 
-      <section class="places">
-	<h1>Places</h1>
+			<section class="places">
+				<h1 class="marge">Places</h1>
+				<div class="row">
+					<article class="art">
+						<h2 class="fonts">My home</h2>
+						<div class="price-by-night">
+							<p class="dollar">&#36;80</p>
+						</div>
+						<div class="information">
+							<ul class="lister">
+								<li class="max_guest">2 guests</li><!--
+								--><li class="number_rooms">1 bedroom</li><!--
+								--><li class="number_bathrooms">1 bathroom</li>
+							</ul>
+						</div>
+						<div class="user">
+							<span class="owner">Owner: </span><span>John Lennon</span>
+						</div>
+						<div class="description">
+							<p>This is a lovely 1 bedroom and 1 bathroom apartment that can accomodate 2 people. It locates at the center of Shanghai and next to subway line 1. 1 stop to People Square, 2 stops to Bund and 3 stops to Jingan Temple</p>
+						</div>
+					</article><!--
+					--><article class="art">
+						<h2 class="fonts">Tiny house</h2>
+						<div class="price-by-night">
+							<p class="dollar">&#36;65</p>
+						</div>
+						<div class="information">
+							<ul class="lister">
+								<li class="max_guest">2 guests</li><!--
+								--><li class="number_rooms">1 bedroom</li><!--
+								--><li class="number_bathrooms">1 bathroom</li>
+							</ul>
+						</div>
+						<div class="user">
+							<span class="owner">Owner: </span><span>Adrienne</span>
+						</div>
+						<div class="description">
+							<p>Our place is a private, affordable stand-alone guests house centrally located just minutes to French Quarters, downtown, the Fair Grounds (Jazz Fest) and City Park. The guest house is a quaint 400 square ft. with a single bath mini kitchen & living room. The extra high ceilings make the home feel more spacious. The sofa converts to a bed also. We have a hand made counter area that adds character to the room and a great porch/deck to relax on and have a glass of Merlot.</p>
+						</div>
 
+					</article>
+				</div>
+				<article class="alone">
+					<h2 class="fonts">A suite</h2>
+					<div class="price-by-night">
+						<p class="dollar">&#36;190</p>
+					</div>
+					<div class="information">
+						<ul class="lister">
+							<li class="max_guest">2 guests</li><!--
+							--><li class="number_rooms">1 bedroom</li><!--
+							--><li class="number_bathrooms">1 bathroom</li>
+						</ul>
+					</div>
+					<div class="user">
+						<span class="owner">Owner: </span><span>Urom Jehoshaphat</span>
+					</div>
+					<div class="description">
+						<p>Luxurious 3-Bed Apartment in VI. Welcome to your home in the heart of Victoria Island! This luxurious 3 bedroom apartment offers a premium living experience for families, business executives and anyone on the go. Situated in a secure estate not far from the Moshood Abiola International Airport, it is a lovely oasis within the heart of Ikoyi nestling within the vibrant and bustling lagos state of Nigeria</p>
+					</div>
 
-	<div class="articles">
-	  <article class="home">
-	    <h2>My home</h2>
-	    <div class="price_by_night">
-	      $ 80
-	    </div>
+				</article>
+			</section>
 
-	  </article>
-	  <article class="house">
-	    <h2>Tiny house</h2>
-	    <div class="price_by_night">
-	      $ 100
-	    </div>
-	  </article>
-	</div>
+		</div>
 
-	<div class="new">
-	  <article class="suite">
-	    <h2>A suite</h2>
-	  </article>
-	</div>
-
-      </section>
-
-    </div>
-    <footer>
-	Best School
-    </footer>
-  </body>
+		<footer>
+			<small>Best School</small>
+		</footer>
+	</body>
 </html>

@@ -1,67 +1,55 @@
-/* section - filters
- * inside .container
- */
-/* filters */
-.filters{
-    background-color: #ffffff;
-    height: 70px;
-    width: 100%;
-    border: 1px solid #DDDDDD;
-    border-radius: 4px;
-    line-height: 70px;
+/*
+* ============================
+* search bar and button style
+* ============================
+*/
+.filters {
+	background: white;
+	height: 70px;
+	width: 100%;
+	border: 1px solid #DDDDDD;
+	border-radius: 4px;
+	position: relative;
 }
 
-/* Search button style */
-button{
-    font-size: 18px;
-    background-color: #FF5A5F;
-    color: #FFFFFF;
-    height: 48px;
-    width: 20%;
-    border: 0px;
-    border-radius: 4px;
-    float:right;
-    margin-top: -52px;
-    align-items:centre;
-    padding-right: 70px;
+.btn {
+	display: inline-block;
+	font: 18px;
+	background: #FF5A5F;
+	color: #FFFFFF;
+	height: 48px;
+	width: 20%;
+	border: 0;
+	border-radius: 4px;
+	position: absolute;
+	top: 15%;
+	right: 30px;
 }
 
-/* Search button opacity on hovering */
-button:hover {
-    opacity: 90%;
+.btn:hover {
+	opacity: 90%
 }
 
-/* align button right */
-.align_right{
-    text-align: right;
-    margin-right: 30px;
+.locations,
+.amenities {
+	height: 100%;
+	width: 25%;
+	display: inline-block;
+	margin-left: 40px;
+	line-height: 2px;
+	box-sizing: border-box;
+	padding: 12px 20px;
 }
 
-.locations{
-    text-align: left;
-    height: 100%;
-    width: 25%;
-    border-right: solid 1px #DDDDDD;
-    margin-left: 30px;
-    float:left;
-    margin-right: 30px;
+.locations {
+	border-right: 1px solid #DDDDDD;
 }
 
-.amenities{
-    height: 100%;
-    margin-left: 30px;
+.title {
+	font-weight: 600;
 }
 
-h3{
-    font-weight: 600;
-    margin: 0px;
-    margin-top: -7px;
-    padding: 0px;
-}
-
-h4{
-    margin-top: -50px;
-    padding: 0px;
-    font-weight: 400;
-    font-size: 14px;
+.subtitles {
+	font-weight: 400;
+	font-size: 14px;
 }

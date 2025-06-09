@@ -1,59 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <meta charset="utf-8">
-  <head>
-    <title>AirBnB Clone</title>
-    <link rel="stylesheet" href="styles/4-common.css">
-    <link rel="stylesheet" href="styles/3-header.css">
-    <link rel="stylesheet" href="styles/3-footer.css">
-    <link rel="stylesheet" href="styles/6-filters.css">
-    <link rel="icon" href="images/icon.png" type="image/x-icon"/>
-  </head>
+	<head>
+		<meta charset="utf-8">
+		<title>Airbnb Clone</title>
+		<link rel="stylesheet" href="styles/4-common.css">
+		<link rel="stylesheet" href="styles/3-header.css">
+		<link rel="stylesheet" href="styles/3-footer.css">
+		<link rel="stylesheet" href="styles/6-filters.css">
+		<link rel="logo" href="images/logo.png">
+		<link rel="icon" href="./images/icon.png">
+	</head>
 
+	<body>
+		<header>
+		</header>
 
-  <body class="common">
-    <header>
-      <div class="logo">
-      </div>
-    </header>
-    <div class="container">
-      <section class="filters">
-	<div class="locations">
-	  <h3>States</h3>
-	  <h4>Lagos, Abuja...</h4>
-	  <ul class="popover">
-	    <li><h2>Kaduna:</h2></li>
-	    <li>
-	      <ul class="popover_list">
-		<li>Kaduna</li>
-		<li>Kafanchan</li>
-	      </ul>
-	    </li>
-	    <li><h2>Ebonyi:</h2></li>
-	    <li>
-	      <ul class="popover_list">
-		<li>Afikpo</li>
-		<li>Abakiliki</li>
-	      </ul>
-	    <li>
-	</div>
-	<div class="amenities">
-	  <h3>Amenities</h3>
-	  <h4>Laundry, Internet...</h4>
-	  <ul class="popover">
-	    <li>Internet</li>
-	    <li>TV</li>
-	    <li>Kitchen</li>
-	    <li>Iron</li>
-	  </ul>
-	</div>
-	<button class="align_right">
-	  Search
-	</button>
-      </section>
-    </div>
-    <footer>
-	Best School
-    </footer>
-  </body>
+		<div class="container">
+			<section class="filters">
+				<div class="locations">
+					<h3 class="title">States</h3>
+					<h4 class="subtitles">Carlifornia, Arizona...</h4>
+					<ul class="popover">
+						<li class="heading">Arizona:</li>
+							<ul class="subpop">
+								<li>Page</li>
+								<li>Page 2</li>
+							</ul>
+						<li class="heading pad">California:</li>
+							<ul class="subpop">
+								<li>San Francisco</li>
+								<li>Los Altos</li>
+							</ul>
+					</ul>
+				</div><!--
+				--><div class="amenities">
+					<h3 class="title">Amenities</h3>
+					<h4 class="subtitles">Internet, Kitchen...</h4>
+					<ul class="popover stand-alone">
+						<li>Internet</li>
+						<li>Kitchen</li>
+						<li>TV</li>
+						<li>Iron</li>
+					</ul>
+				</div>
+				<button class="btn">Search</button>
+			</section>
+
+		</div>
+
+		<footer>
+			<small>Best School</small>
+		</footer>
+	</body>
 </html>
